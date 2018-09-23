@@ -1,4 +1,4 @@
-var connection = require("./connection.js");
+ var connection = require("./connection.js");
 
 var orm = {
 	all: function(tableInput, cb) {
@@ -9,7 +9,20 @@ var orm = {
 			}
 			cb(res);
 		});
+	},
+
+	update: function(tableInput, condition, cb) {
+		var queryString = "Update " + tableInput + " SET devoured=true WHERE id=" + condition + ";";
+
+		connection.query(queryString, function(err, res) {
+			if(err) {
+				throw err;
+			}
+			cb(res);
+		})
 	}
+
+
 };
 
 module.exports = orm;

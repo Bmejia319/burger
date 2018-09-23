@@ -14,15 +14,22 @@
 							<pre>{{this.id}}.{{this.burger_name}}</pre>
 						</div>
 						<div class="col-xs-3 text-center">
-							<form method="POST" action="/burgers/update?_method=PUT"
+							<form method="Update" action="/burgers/update"
 							 class="button-size">
 							<input type="hidden" name="burger_id" type="text" value={{this.id}}>
 							<br>
-							<<button type="submit" class="btn btn-default">Devour it!</button>
+							<button type="submit" class="btn btn-default">Eat that shit!</button>
 							</form>
 						</div>
 						{{/unless}}
 						{{/each}}
+				</div>
+				<div class="col-xs-6 text-center" class="task">
+					{{#each burger_data}}
+						{{#if this.devoured}}
+							<input type="text" class="form-control" placeholder="{{this.id}}.{{this.burger_name}}" readonly>
+						{{/if}}
+					{{/each}}
 				</div>
 			</div>
 		</div>
