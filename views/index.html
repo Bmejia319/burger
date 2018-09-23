@@ -1,3 +1,25 @@
+
+<!DOCTYPE html>
+
+
+<html>
+
+
+<head>
+	<meta charset="utf-8">
+
+	<meta http-equiv="X-UA-Compatible"
+		content="IE=edge">
+
+	<title />
+
+	<link rel="stylesheet"
+		href>
+
+</head>
+
+<body>
+
 	<div class="container">
 
 		<div class="row">
@@ -11,10 +33,10 @@
 					{{#each burger_data}}
 						{{#unless this.devoured}}
 						<div class="col-xs-9 text-center">
-							<pre>{{this.id}}.{{this.burger_name}}</pre>
+							<pre>{{this.id}}.{{thus.burger_name}}</pre>
 						</div>
 						<div class="col-xs-3 text-center">
-							<form method="POST" action="/burgers/update?_method=PUT"
+							<form method="POST" acrtion="/burgers/update?_method=PUT"
 							 class="button-size">
 							<input type="hidden" name="burger_id" type="text" value={{this.id}}>
 							<br>
@@ -27,3 +49,5 @@
 			</div>
 		</div>
 	</div>
+</body>
+</html>
